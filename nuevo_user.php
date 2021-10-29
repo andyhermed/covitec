@@ -50,6 +50,18 @@ require_once ("conexion.php");
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="fields">
             <span>
+            <h2>Nombre(s)</h2>
+            <input placeholder="Introduce el nombre(s)" type="text" name= "nombre" />
+            </span>
+            <span>
+            <h2>Apellido Paterno</h2>
+            <input placeholder="Introduce el apellido paterno" type="text" name= "apellido_paterno" />
+            </span>
+            <span>
+            <h2>Apellido Materno</h2>
+            <input placeholder="Introduce el apellido materno" type="text" name= "apellido_materno" />
+            </span>
+            <span>
             <h2>Usuario</h2>
             <input placeholder="Introduce el usuario" type="text" name = "usuario" />
             </span>
@@ -59,10 +71,6 @@ require_once ("conexion.php");
             <input placeholder="Introduce la contraseña" type="password" name= "contrasena" />
             </span>
             <br />
-            <span>
-            <h2>Nombre Completo</h2>
-            <input placeholder="Introduce el nombre completo" type="text" name= "nombre_comp" />
-            </span>
             </div>
             <div id="save">
             <input name="save" value="Guardar" type="submit" />
@@ -80,9 +88,11 @@ if(isset($_POST['save'])){
 
     $u = $_POST['usuario'];
     $c = $_POST['contrasena']; 
-    $n = $_POST['nombre_comp'];
+    $n = $_POST['nombre'];
+    $a_p = $_POST['apellido_paterno'];
+    $a_m = $_POST['apellido_materno'];
 
-    if($u == "" || $c == null || $n ==""){ // Validamos que ningún campo quede vacío
+    if($u == "" || $c == null || $n =="" || $a_p =="" || $a_m ==""){ // Validamos que ningún campo quede vacío
         echo "<script>alert('Ningún campo puede quedar vacío. Por favor, rellena los campos faltantes')</script>";
     }else{
  
@@ -97,7 +107,7 @@ if(isset($_POST['save'])){
             if($filas == 1){
                 echo "<script>alert('Este usuario ya existe. Por favor, escribe uno diferente')</script>";
             }else{
-                $sql = "insert into usuarios values('".$u."','".$c."','".$n."')";
+                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."')";
     
                 if ($conn->query($sql)) {
                     $mensaje = "";

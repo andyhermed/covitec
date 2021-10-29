@@ -3,10 +3,10 @@
 require_once ("conexion.php");
 $mensaje = "";
 //revisar datos a insertar 
-if (isset($_POST["u_id"]) and isset($_POST["u_name"]) and isset($_POST["u_email"])){
+if (isset($_POST["u_no_control"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_nombre"]) and isset($_POST["u_apellido_paterno"]) and isset($_POST["u_apellido_materno"]) and isset($_POST["u_carrera"])){
     
     //procedemos a insertar
-    $sql = "insert into pruebas (id, nombre, email) values('".$_POST["u_id"]."','".$_POST["u_name"]."','".$_POST["u_email"]."')";
+    $sql = "insert into info_alumnos (no_control, contrasena, nombre, apellido_paterno, apellido_materno, carrera) values('".$_POST["u_no_control"]."','".$_POST["u_contrasena"]."','".$_POST["u_nombre"]."','".$_POST["u_apellido_paterno"]."','".$_POST["u_apellido_materno"]."','".$_POST["u_carrera"]."')";
     
     if ($conn->query($sql)) {
         $mensaje = "";
@@ -16,7 +16,7 @@ if (isset($_POST["u_id"]) and isset($_POST["u_name"]) and isset($_POST["u_email"
 }
 
 //realizar consulta de registros y guardarlos en variable
-$sql = "select * from pruebas";
+$sql = "select * from info_alumnos";
 $resultado = $conn->query($sql);
 //indicar donde poner los registros
 
@@ -41,7 +41,7 @@ $resultado = $conn->query($sql);
             <div id="navegacion">
                 <div id=reporte>
                 <img src="img/reporte1.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
+                <a href="../covitec/reportes.php">Reportes generales</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte2.png" alt="">
@@ -68,17 +68,21 @@ $resultado = $conn->query($sql);
             <table>
                         <tbody>
                             <tr>
-                                <th>ID</th>
+                                <th>No de control</th>
                                 <th>Nombre</th>
-                                <th>Correo electrónico</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Carrera</th>
                             </tr>
                             <?php //ESTO ES PHP
                                 if ($resultado->num_rows>0) {
                                     while ($registro = $resultado->fetch_array()) {
                                          echo "<tr>";
-                                         echo "<td>".$registro['id']."</td>";
+                                         echo "<td>".$registro['no_control']."</td>";
                                          echo "<td>".$registro['nombre']."</td>";
-                                         echo "<td>".$registro['correo']."</td>";
+                                         echo "<td>".$registro['apellido_paterno']."</td>";
+                                         echo "<td>".$registro['apellido_materno']."</td>";
+                                         echo "<td>".$registro['carrera']."</td>";
                                          echo "</tr>";
                                     }
                                 }

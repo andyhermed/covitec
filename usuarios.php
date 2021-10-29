@@ -3,10 +3,10 @@
 require_once ("conexion.php");
 $mensaje = "";
 //revisar datos a insertar 
-if (isset($_POST["u_usuario"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_nombre_comp"])){
+if (isset($_POST["u_id"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_nombre"]) and isset($_POST["u_apellido_paterno"]) and isset($_POST["u_apellido_materno"])){
     
     //procedemos a insertar
-    $sql = "insert into usuarios (usuario, contrasena, nombre_comp) values('".$_POST["u_usuario"]."','".$_POST["u_contrasena"]."','".$_POST["u_nombre_comp"]."')";
+    $sql = "insert into usuarios values('".$_POST["u_id"]."','".$_POST["u_contrasena"]."','".$_POST["u_nombre"]."','".$_POST["u_apellido_paterno"]."','".$_POST["u_apellido_materno"]."')";
     
     if ($conn->query($sql)) {
         $mensaje = "";
@@ -70,19 +70,23 @@ $resultado = $conn->query($sql);
                             <tr>
                                 <th>Usuario</th>
                                 <th>Contraseña</th>
-                                <th>Nombre Completo</th>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
                                 <th></th>
                             </tr>
                             <?php //ESTO ES PHP
                                 if ($resultado->num_rows>0) {
                                     while ($registro = $resultado->fetch_array()) {
                                          echo "<tr>";
-                                         echo "<td>".$registro['usuario']."</td>";
+                                         echo "<td>".$registro['id']."</td>";
                                          echo "<td>".$registro['contrasena']."</td>";
-                                         echo "<td>".$registro['nombre_comp']."</td>";
+                                         echo "<td>".$registro['nombre']."</td>";
+                                         echo "<td>".$registro['apellido_paterno']."</td>";
+                                         echo "<td>".$registro['apellido_materno']."</td>";
                                          echo "<td>";
-                                         echo "<a href='editar.php?id=".$registro['usuario']."' class='edit'>Editar</a>&nbsp;";
-                                         echo "<a href='baja.php?id=".$registro['usuario']."' class='delete delete-action'>Dar de baja</a>";
+                                         echo "<a href='editar.php?id=".$registro['id']."' class='edit'>Editar</a>&nbsp;";
+                                         echo "<a href='baja.php?id=".$registro['id']."' class='delete delete-action'>Dar de baja</a>";
                                          echo "</td>";
                                          echo "</tr>";
                                     }
