@@ -1,0 +1,33 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0px 0 50px 0;
+    background-color: #ffffff;
+    color: #222222;
+}
+.container #encabezado h1{
+    color: #760030;
+    margin-left: 580px;
+}
+.container .fields{
+    margin: 0 80px 10px 520px
+}
+.container .fields h2{
+    color: #00305C;
+    font-size: 20px;
+}
+.container #login {
+    margin: 20px 100px 10px 570px;
+}
+input{
+    border-radius: 22px;
+    height: 34px;
+    width: 300px;
+}
+input[type="submit"]{ 
+    background:#C2A152 ! important;
+    color:#ffffff;
+    width:200px;
+    cursor:pointer;
+    font-size: 20px;
+  }

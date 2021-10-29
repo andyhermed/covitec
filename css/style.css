@@ -1,0 +1,100 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0px 0 50px 0;
+    background-color: #f7f7f7;
+    color: #222222;
+}
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+.container .header #titulo{
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(to right, #AF1051, #760030);
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0.5px;
+}
+.container .header img{
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+    width: 100px;
+}
+.container #navegacion{
+    background: linear-gradient(to bottom, #AF1051, #760030);
+    width: 150px;
+    height: 450px;
+}
+
+.container #navegacion #reporte a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 5px 0 0;
+}
+.container #navegacion #reporte img{
+    width: 30px;
+    margin: 5px 5px 5px 5px;
+}
+.container img{
+    width: 1000px;
+    float:left;
+}
+.user-list {
+    padding-left: 20px;
+    flex: left;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    background-color: #760030;
+    color: #ffffff;
+}
+
+table th,
+table td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: center;
+    
+}
+table td{
+    color: #000000;
+}
+a.edit,
+a.delete,
+a.nuevo {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+a.delete {
+    color: #ffffff;
+    background-color: #DD4141;;
+}
+a.edit {
+    margin-right: 7px;
+    color: #ffffff;
+    background-color: #EBAA3B;
+}
+a.nuevo{
+    font-size: 20px;
+    margin: 100px 0 0 1000px;
+    color: #ffffff;
+    background-color: #C2A152;
+}
