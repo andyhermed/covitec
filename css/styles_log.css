@@ -30,4 +30,5 @@ input[type="submit"]{
     width:200px;
     cursor:pointer;
     font-size: 20px;
+    margin-top: 10px;
   }

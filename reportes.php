@@ -41,7 +41,7 @@ $resultado = $conn->query($sql);
             <div id="navegacion">
                 <div id=reporte>
                 <img src="img/reporte1.png" alt="">
-                <a href="../covitec/reportes.php">Reportes generales</a>
+                <a href="../covitec/reportes.php">Reportes Generales</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte2.png" alt="">
@@ -66,6 +66,7 @@ $resultado = $conn->query($sql);
             </div>
             <div class="user-list">
             <table>
+                <caption>Reporte General</caption>
                         <tbody>
                             <tr>
                                 <th>No de control</th>
