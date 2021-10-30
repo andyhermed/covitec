@@ -66,7 +66,7 @@ $resultado = $conn->query($sql);
             </div>
             <div class="user-list">
             <table>
-                <caption>Reporte General</caption>
+                <caption>Reportes Generales</caption>
                         <tbody>
                             <tr>
                                 <th>No de control</th>
