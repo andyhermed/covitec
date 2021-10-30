@@ -1,3 +1,13 @@
+<?php
+//consultar el registro seleccionado para colocarlo en el formulario 
+require_once "conexion.php";
+if (isset($_GET['id'])) {
+    $sql = "select * from usuarios where id=".$_GET['id'];
+    $resultado = $conn->query($sql);
+}else {
+    header("location: usuarios.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,78 +52,42 @@
                 </div>
             </div>
     </div>
-    <div class="form">
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <?php if ($resultado->num_rows>0) { 
+            $row = $resultado->fetch_array();
+        ?>
+        <div class="form">
+        <form method="post" action="actualizar_user.php">
             <div class="fields">
             <span>
             <h2>Nombre(s)</h2>
-            <input placeholder="Introduce el nombre(s)" type="text" name= "nombre" />
+            <input placeholder="Introduce el nombre(s)" value="<?php echo $row['nombre']?>" type="text" name= "nombre" />
             </span>
             <span>
             <h2>Apellido Paterno</h2>
-            <input placeholder="Introduce el apellido paterno" type="text" name= "apellido_paterno" />
+            <input placeholder="Introduce el apellido paterno" value="<?php echo $row['apellido_paterno']?>"  type="text" name= "apellido_paterno" />
             </span>
             <span>
             <h2>Apellido Materno</h2>
-            <input placeholder="Introduce el apellido materno" type="text" name= "apellido_materno" />
+            <input placeholder="Introduce el apellido materno" value="<?php echo $row['apellido_materno']?>" type="text" name= "apellido_materno" />
             </span>
             <span>
-            <h2>Usuario</h2>
-            <input placeholder="Introduce el usuario" type="text" name = "usuario" />
+            <input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
             </span>
             <br />
             <span>
             <h2>Contraseña</h2>
-            <input placeholder="Introduce la contraseña" type="password" name= "contrasena" />
+            <input placeholder="Introduce la contraseña" value="<?php echo $row['contrasena']?>" type="password" name= "contrasena" />
             </span>
             <br />
             </div>
             <div id="save">
             <input name="save" value="Guardar" type="submit" />
             </div>
-        </div>
+        <?php }else {
+            echo "<script>alert('Este usuario no existe')</script>";
+        } ?>
+    </div>
+
 </body>
 </html>
 
-<?php
-//realizar conexion
-require_once ("conexion.php");
-$mensaje = "";
-//revisar datos a insertar 
-if(isset($_POST['save'])){
-
-    $u = $_POST['usuario'];
-    $c = $_POST['contrasena']; 
-    $n = $_POST['nombre'];
-    $a_p = $_POST['apellido_paterno'];
-    $a_m = $_POST['apellido_materno'];
-
-    if($u == "" || $c == null || $n =="" || $a_p =="" || $a_m ==""){ // Validamos que ningún campo quede vacío
-        echo "<script>alert('Ningún campo puede quedar vacío. Por favor, rellena los campos faltantes')</script>";
-    }else{
- 
-        $sql = "SELECT * FROM usuarios WHERE id = '$u'";
-
-        if(!$consulta = $conn->query($sql)){
-            echo "ERROR: no se pudo ejecutar la consulta!";
-        }else{
-
-            $filas = mysqli_num_rows($consulta);
-
-            if($filas == 1){
-                echo "<script>alert('Este usuario ya existe. Por favor, escribe uno diferente')</script>";
-            }else{
-                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."')";
-    
-                if ($conn->query($sql)) {
-                    $mensaje = "";
-                    header('location:usuarios.php'); // Si está todo correcto redirigimos a otra página
-                }else {
-                    $mensaje = "<p class='msg err-msg'>Error al insertar datos</p>";
-                }    
-            }
-        }
-    }
-}
-
-?>

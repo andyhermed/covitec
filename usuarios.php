@@ -85,7 +85,7 @@ $resultado = $conn->query($sql);
                                          echo "<td>".$registro['apellido_paterno']."</td>";
                                          echo "<td>".$registro['apellido_materno']."</td>";
                                          echo "<td>";
-                                         echo "<a href='editar.php?id=".$registro['id']."' class='edit'>Editar</a>&nbsp;";
+                                         echo "<a href='editar_user.php?id=".$registro['id']."' class='edit'>Editar</a>&nbsp;";
                                          echo "<a href='baja.php?id=".$registro['id']."' class='delete delete-action'>Dar de baja</a>";
                                          echo "</td>";
                                          echo "</tr>";
