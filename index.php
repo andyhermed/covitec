@@ -45,7 +45,7 @@ if(isset($_POST['login'])){
         echo "<script>alert('Usuario o contraseña vacíos')</script>";
     }else{
 
-        $sql = "SELECT * FROM usuarios WHERE id = '$u' AND contrasena = '$c'";
+        $sql = "SELECT * FROM usuarios WHERE id = '$u' AND contrasena = '$c' AND estatus = 1";
 
         if(!$consulta = $conn->query($sql)){
             echo "ERROR: no se pudo ejecutar la consulta!";

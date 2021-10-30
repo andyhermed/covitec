@@ -16,7 +16,7 @@ if (isset($_POST["u_id"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_
 }
 
 //realizar consulta de registros y guardarlos en variable
-$sql = "select * from usuarios";
+$sql = "select * from usuarios where estatus = 1";
 $resultado = $conn->query($sql);
 //indicar donde poner los registros
 
@@ -61,7 +61,7 @@ $resultado = $conn->query($sql);
                 </div>
                 <div id=reporte>
                 <img src="img/cerrar_sesion.png" alt="">
-                <a href="index.php">Cerrar Sesión.</a>
+                <a href="../covitec/index.php">Cerrar Sesión.</a>
                 </div>
             </div>
             <div class="user-list">
@@ -86,7 +86,7 @@ $resultado = $conn->query($sql);
                                          echo "<td>".$registro['apellido_materno']."</td>";
                                          echo "<td>";
                                          echo "<a href='editar_user.php?id=".$registro['id']."' class='edit'>Editar</a>&nbsp;";
-                                         echo "<a href='baja.php?id=".$registro['id']."' class='delete delete-action'>Dar de baja</a>";
+                                         echo "<a href='baja_user.php?id=".$registro['id']."' class='delete delete-action'>Dar de baja</a>";
                                          echo "</td>";
                                          echo "</tr>";
                                     }
@@ -100,5 +100,16 @@ $resultado = $conn->query($sql);
                 <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
         </div>
+        <script>
+        var delteAction = document.querySelectorAll('.delete-action');
+        delteAction.forEach((el) => {
+            el.onclick = function(e) {
+                e.preventDefault();
+                if (confirm('¿Estás seguro que quieres dar de baja a este usaurio? Esta acción no se puede deshacer')) {
+                    window.location.href = e.target.href;
+                }
+            }
+        });
+    </script>
     </body>
 </html>

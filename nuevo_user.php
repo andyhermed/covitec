@@ -103,7 +103,7 @@ if(isset($_POST['save'])){
             if($filas == 1){
                 echo "<script>alert('Este usuario ya existe. Por favor, escribe uno diferente')</script>";
             }else{
-                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."')";
+                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."', 1)";
     
                 if ($conn->query($sql)) {
                     $mensaje = "";
