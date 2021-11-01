@@ -41,7 +41,7 @@ $resultado = $conn->query($sql);
             <div id="navegacion">
                 <div id=reporte>
                 <img src="img/reporte1.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
+                <a href="../covitec/reportes.php">Reportes generales</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte2.png" alt="">
