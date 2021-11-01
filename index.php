@@ -58,7 +58,7 @@ if(isset($_POST['login'])){
             if($filas == 0){
                 echo "<script>alert('Usuario o contraseña incorrectos')</script>";
             }else{
-                header('location:reportes.php'); // Si está todo correcto redirigimos a otra página
+                header('location:reporte_alumnos.php'); // Si está todo correcto redirigimos a otra página
             }
 
         }
