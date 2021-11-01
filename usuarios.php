@@ -38,22 +38,26 @@ $resultado = $conn->query($sql);
                     <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
                     <h1>Sistema de control de Acceso</h1>
                 </div>
-            <div id="navegacion">
+                <div id="navegacion">
                 <div id=reporte>
                 <img src="img/reporte1.png" alt="">
-                <a href="../covitec/reportes.php">Reportes generales</a>
+                <a href="../covitec/reporte_alumnos.php">Reporte diario alumnos</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte2.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
+                <a href="#">Reporte diario trabajadores</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte3.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
+                <a href="#">Reporte de alertas</a>
                 </div>
                 <div id=reporte>
                 <img src="img/reporte4.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
+                <a href="#">Reporte semanal</a>
+                </div>
+                <div id=reporte>
+                <img src="img/reporte4.png" alt="">
+                <a href="#">Reporte Mensual</a>
                 </div>
                 <div id=reporte>
                 <img src="img/usuario.png" alt="">
