@@ -1,7 +1,10 @@
 <?php
+date_default_timezone_set("America/Mexico_City");
 //realizar conexion
 require_once ("conexion.php");
 $mensaje = "";
+$fecha = Date("Y-m-d");
+$fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));
 //revisar datos a insertar 
 if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST["u_resp2"]) and isset($_POST["u_resp3"]) and isset($_POST["u_hr_cuestionario"]) and isset($_POST["u_hr_ingreso"]) and isset($_POST["u_fecha"])){
     //procedemos a insertar
@@ -16,10 +19,41 @@ if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST[
 }
 
 //realizar consulta de registros y guardarlos en variable
-$fecha = Date("Y-m-d");
-$fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));
-$sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
-$resultado = $conn->query($sql);
+if(isset($_POST['search'])){
+    $ncontrol = $_POST['ncontrol'];
+    $h_desde = $_POST['desde'];
+    $h_hasta = $_POST['hasta'];
+    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+    $resultado = $conn->query($sql);
+    if ($h_desde == "") {
+        if ($h_hasta == "") {
+            $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%')";
+            $resultado = $conn->query($sql);
+        }
+    }
+    if ($ncontrol == "") {
+        $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+            $resultado = $conn->query($sql);
+    }
+    if ($ncontrol == ""){
+        if ($h_desde == "") {
+            if ($h_hasta == "") {
+                $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+                $resultado = $conn->query($sql);
+            }
+        }
+    }
+}else {
+    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $resultado = $conn->query($sql);
+}
+if (isset ($_POST['mostrar'])) {
+    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $resultado = $conn->query($sql);
+}
+$ncontrol = "";
+$h_desde = "";
+$h_hasta = "";
 //indicar donde poner los registros
 ?>
 <!DOCTYPE html>
@@ -69,10 +103,26 @@ $resultado = $conn->query($sql);
                 <a href="../covitec/index.php">Cerrar Sesión.</a>
                 </div>
             </div>
-            <div class = "Seleccion">
-                <p>Buscar </p>
-                <input type="search" id="search" placeholder="Número de control"/>
-
+            <div class = "filtro">
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <div class="buscar">
+                <span>
+                <p>Número de control</p>
+                <input type="text" name="ncontrol" placeholder="Número de control"/>
+                </span>
+                <span>
+                <p>Hora de ingreso</p>
+                <p>Desde</p>
+                <input type="time" name="desde"> 
+                <p>Hasta</p>
+                <input type="time" name="hasta"> 
+                <input type="submit" name="search" value="Buscar">
+                </span>
+                <br>
+                <span>
+                <input type="submit" name="mostrar" value="Mostrar todos">
+                </span>
+                </div>
             </div>
             <div class="user-list">
             <table>
@@ -86,7 +136,7 @@ $resultado = $conn->query($sql);
                                 <th>Hora Ingreso</th>
                                 <th>Fecha</th>
                             </tr>
-                            <?php //ESTO ES PHP
+                            <?php 
                                 if ($resultado->num_rows>0) {
                                     while ($registro = $resultado->fetch_array()) {
                                          echo "<tr>";
@@ -100,8 +150,6 @@ $resultado = $conn->query($sql);
                                          echo "</tr>";
                                     }
                                 }
-                                echo "<h1>".$fecha."</h1>";
-                                echo "<h1>".$fecha_sig."</h1>";
                             ?> 
                         </tbody>
                     </table>
