@@ -6,9 +6,9 @@ $mensaje = "";
 $fecha = Date("Y-m-d");
 $fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));
 //revisar datos a insertar 
-if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST["u_resp2"]) and isset($_POST["u_resp3"]) and isset($_POST["u_hr_cuestionario"]) and isset($_POST["u_hr_ingreso"]) and isset($_POST["u_fecha"])){
+if (isset($_POST["u_no_checador"]) and isset($_POST["u_resp1"]) and isset($_POST["u_resp2"]) and isset($_POST["u_resp3"]) and isset($_POST["u_hr_cuestionario"]) and isset($_POST["u_hr_ingreso"]) and isset($_POST["u_fecha"])){
     //procedemos a insertar
-    $sql = "insert into alumnos_copia (no_control, resp1, resp2, resp3, hr_cuestionario, hr_ingreso, fecha) values('".$_POST["u_no_control"]."','".$_POST["u_resp1"]."','".$_POST["u_resp2"]."','".$_POST["u_resp3"]."','".$_POST["u_hr_cuestionario"]."','".$_POST["u_hr_ingreso"]."','".$_POST["u_hr_fecha"]."')";
+    $sql = "insert into trabajadores (no_checador, resp1, resp2, resp3, hr_cuestionario, hr_ingreso, fecha) values('".$_POST["u_no_checador"]."','".$_POST["u_resp1"]."','".$_POST["u_resp2"]."','".$_POST["u_resp3"]."','".$_POST["u_hr_cuestionario"]."','".$_POST["u_hr_ingreso"]."','".$_POST["u_hr_fecha"]."')";
         
     if ($conn->query($sql)) {
             $mensaje = "";
@@ -20,38 +20,38 @@ if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST[
 
 //realizar consulta de registros y guardarlos en variable
 if(isset($_POST['search'])){
-    $ncontrol = $_POST['ncontrol'];
+    $nchecador = $_POST['nchecador'];
     $h_desde = $_POST['desde'];
     $h_hasta = $_POST['hasta'];
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+    $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_checador like '%".$nchecador."%' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
     $resultado = $conn->query($sql);
     if ($h_desde == "") {
         if ($h_hasta == "") {
-            $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%')";
+            $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_checador like '%".$nchecador."%')";
             $resultado = $conn->query($sql);
         }
     }
-    if ($ncontrol == "") {
-        $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+    if ($nchecador == "") {
+        $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
             $resultado = $conn->query($sql);
     }
-    if ($ncontrol == ""){
+    if ($nchecador == ""){
         if ($h_desde == "") {
             if ($h_hasta == "") {
-                $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+                $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
                 $resultado = $conn->query($sql);
             }
         }
     }
 }else {
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
     $resultado = $conn->query($sql);
 }
 if (isset ($_POST['mostrar'])) {
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $sql = "(select * from trabajadores where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
     $resultado = $conn->query($sql);
 }
-$ncontrol = "";
+$nchecador = "";
 $h_desde = "";
 $h_hasta = "";
 //indicar donde poner los registros
@@ -88,15 +88,11 @@ $h_hasta = "";
                 </div>
                 <div id=reporte>
                 <img src="img/reporte4.png" alt="">
+                <a href="#">Reporte semanal</a>
+                </div>
+                <div id=reporte>
+                <img src="img/reporte4.png" alt="">
                 <a href="#">Reporte Mensual</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte General Alumnos</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte General Trabajadores</a>
                 </div>
                 <div id=reporte>
                 <img src="img/usuario.png" alt="">
@@ -111,8 +107,8 @@ $h_hasta = "";
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="buscar">
                 <span>
-                <p>Número de control</p>
-                <input type="text" name="ncontrol" placeholder="Número de control"/>
+                <p>Número de checador</p>
+                <input type="text" name="nchecador" placeholder="Número de checador"/>
                 </span>
                 <span>
                 <p>Hora de ingreso</p>
@@ -132,7 +128,7 @@ $h_hasta = "";
             <table>
                         <tbody>
                             <tr>
-                                <th>No de control</th>
+                                <th>No de checador</th>
                                 <th>Pregunta 1</th>
                                 <th>Pregunta 2</th>
                                 <th>Pregunta 3</th>
@@ -144,7 +140,7 @@ $h_hasta = "";
                                 if ($resultado->num_rows>0) {
                                     while ($registro = $resultado->fetch_array()) {
                                          echo "<tr>";
-                                         echo "<td>".$registro['no_control']."</td>";
+                                         echo "<td>".$registro['no_checador']."</td>";
                                          echo "<td>".$registro['resp1']."</td>";
                                          echo "<td>".$registro['resp2']."</td>";
                                          echo "<td>".$registro['resp3']."</td>";
