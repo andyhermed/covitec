@@ -1,3 +1,6 @@
+<?php
+require_once "diseño.html";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +50,6 @@
 <?php
 //realizar conexion
 require_once ("conexion.php");
-require_once "diseño.html";
 $mensaje = "";
 //revisar datos a insertar 
 if(isset($_POST['save'])){
