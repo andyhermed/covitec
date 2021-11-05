@@ -25,7 +25,7 @@ input{
     width: 300px;
 }
 input[type="submit"]{ 
-    background:#C2A152 ! important;
+    background:#c25252 ! important;
     color:#ffffff;
     width:200px;
     cursor:pointer;
