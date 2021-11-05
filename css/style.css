@@ -103,8 +103,9 @@ a.edit {
     background-color: #EBAA3B;
 }
 a.nuevo{
-    font-size: 18px;
-    margin: 100px 0 0 1115px;
+    font-size: 8px;
+    margin: 100px 100px 0 1115px;
     color: #ffffff;
-    background-color: #C2A152;
+    /*background-color: #C2A152;*/
+    background-color: #41ddd0;
 }

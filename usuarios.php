@@ -27,7 +27,7 @@ $resultado = $conn->query($sql);
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sistema de Control </title>
+        <title>Sistema de Control de Acceso</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -36,7 +36,7 @@ $resultado = $conn->query($sql);
             <header class="header">
                 <div id="titulo">
                     <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
+                    <h1>Sistema de control de Acceso </h1>
                 </div>
                 <div id="navegacion">
                 <div id=reporte>
@@ -67,6 +67,9 @@ $resultado = $conn->query($sql);
                 <img src="img/cerrar_sesion.png" alt="">
                 <a href="../covitec/index.php">Cerrar Sesión.</a>
                 </div>
+            </div>
+            <div id="new-user">
+                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
             <div class="user-list">
             <table>
@@ -99,9 +102,6 @@ $resultado = $conn->query($sql);
                         </tbody>
                         
                     </table>
-            </div>
-            <div id="new-user">
-                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
         </div>
         <script>
