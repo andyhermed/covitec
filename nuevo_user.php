@@ -60,7 +60,7 @@ if(isset($_POST['save'])){
     $a_p = $_POST['apellido_paterno'];
     $a_m = $_POST['apellido_materno'];
 
-    if($u == "" || $c == null || $n =="" || $a_p =="" || $a_m ==""){ // Validamos que ningún campo quede vacío
+    if($u == "" || $c == null || $n ==""){ // Validamos que ningún campo quede vacío
         echo "<script>alert('Ningún campo puede quedar vacío. Por favor, rellena los campos faltantes')</script>";
     }else{
  
