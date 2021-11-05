@@ -2,13 +2,14 @@
 date_default_timezone_set("America/Mexico_City");
 //realizar conexion
 require_once ("conexion.php");
+require_once "diseño.html";
 $mensaje = "";
 $fecha = Date("Y-m-d");
 $fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));
 //revisar datos a insertar 
 if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST["u_resp2"]) and isset($_POST["u_resp3"]) and isset($_POST["u_hr_cuestionario"]) and isset($_POST["u_hr_ingreso"]) and isset($_POST["u_fecha"])){
     //procedemos a insertar
-    $sql = "insert into alumnos_copia (no_control, resp1, resp2, resp3, hr_cuestionario, hr_ingreso, fecha) values('".$_POST["u_no_control"]."','".$_POST["u_resp1"]."','".$_POST["u_resp2"]."','".$_POST["u_resp3"]."','".$_POST["u_hr_cuestionario"]."','".$_POST["u_hr_ingreso"]."','".$_POST["u_hr_fecha"]."')";
+    $sql = "insert into alumnos (no_control, resp1, resp2, resp3, hr_cuestionario, hr_ingreso, fecha) values('".$_POST["u_no_control"]."','".$_POST["u_resp1"]."','".$_POST["u_resp2"]."','".$_POST["u_resp3"]."','".$_POST["u_hr_cuestionario"]."','".$_POST["u_hr_ingreso"]."','".$_POST["u_hr_fecha"]."')";
         
     if ($conn->query($sql)) {
             $mensaje = "";
@@ -23,32 +24,32 @@ if(isset($_POST['search'])){
     $ncontrol = $_POST['ncontrol'];
     $h_desde = $_POST['desde'];
     $h_hasta = $_POST['hasta'];
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+    $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
     $resultado = $conn->query($sql);
     if ($h_desde == "") {
         if ($h_hasta == "") {
-            $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%')";
+            $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and no_control like '%".$ncontrol."%')";
             $resultado = $conn->query($sql);
         }
     }
     if ($ncontrol == "") {
-        $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
+        $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."' and hr_ingreso between '".$h_desde."' and '".$h_hasta."')";
             $resultado = $conn->query($sql);
     }
     if ($ncontrol == ""){
         if ($h_desde == "") {
             if ($h_hasta == "") {
-                $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+                $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
                 $resultado = $conn->query($sql);
             }
         }
     }
 }else {
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
     $resultado = $conn->query($sql);
 }
 if (isset ($_POST['mostrar'])) {
-    $sql = "(select * from alumnos_copia where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
+    $sql = "(select * from alumnos where fecha >= '".$fecha."' and fecha < '".$fecha_sig."')";
     $resultado = $conn->query($sql);
 }
 $ncontrol = "";
@@ -68,45 +69,6 @@ $h_hasta = "";
 
     <body>
         <div class="container">
-            <header class="header">
-                <div id="titulo">
-                    <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
-                </div>
-            <div id="navegacion">
-                <div id=reporte>
-                <img src="img/reporte1.png" alt="">
-                <a href="../covitec/reporte_alumnos.php">Reporte diario alumnos</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte2.png" alt="">
-                <a href="reporte_trabajadores.php">Reporte diario trabajadores</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte3.png" alt="">
-                <a href="#">Reporte de alertas</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte Mensual</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte General Alumnos</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte General Trabajadores</a>
-                </div>
-                <div id=reporte>
-                <img src="img/usuario.png" alt="">
-                <a href="../covitec/usuarios.php">Usuarios Registrados</a>
-                </div>
-                <div id=reporte>
-                <img src="img/cerrar_sesion.png" alt="">
-                <a href="../covitec/index.php">Cerrar Sesión.</a>
-                </div>
-            </div>
             <div class = "filtro">
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="buscar">

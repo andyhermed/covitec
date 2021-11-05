@@ -2,6 +2,7 @@
 date_default_timezone_set("America/Mexico_City");
 //realizar conexion
 require_once ("conexion.php");
+require_once "diseño.html";
 $mensaje = "";
 $fecha = Date("Y-m-d");
 $fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));
@@ -68,41 +69,6 @@ $h_hasta = "";
 
     <body>
         <div class="container">
-            <header class="header">
-                <div id="titulo">
-                    <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
-                </div>
-            <div id="navegacion">
-                <div id=reporte>
-                <img src="img/reporte1.png" alt="">
-                <a href="../covitec/reporte_alumnos.php">Reporte diario alumnos</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte2.png" alt="">
-                <a href="reporte_trabajadores.php">Reporte diario trabajadores</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte3.png" alt="">
-                <a href="#">Reporte de alertas</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte semanal</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Reporte Mensual</a>
-                </div>
-                <div id=reporte>
-                <img src="img/usuario.png" alt="">
-                <a href="../covitec/usuarios.php">Usuarios Registrados</a>
-                </div>
-                <div id=reporte>
-                <img src="img/cerrar_sesion.png" alt="">
-                <a href="../covitec/index.php">Cerrar Sesión.</a>
-                </div>
-            </div>
             <div class = "filtro">
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="buscar">

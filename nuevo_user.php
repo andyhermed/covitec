@@ -10,38 +10,7 @@
 </head>
 <body>
 <div class="container">
-            <header class="header">
-                <div id="titulo">
-                    <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
-                </div>
-            <div id="navegacion">
-                <div id=reporte>
-                <img src="img/reporte1.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte2.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte3.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/usuario.png" alt="">
-                <a href="../covitec/usuarios.php">Usuarios Registrados</a>
-                </div>
-                <div id=reporte>
-                <img src="img/cerrar_sesion.png" alt="">
-                <a href="../covitec/index.php">Cerrar Sesión.</a>
-                </div>
-            </div>
-    </div>
+    
     <div class="form">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="fields">
@@ -78,6 +47,7 @@
 <?php
 //realizar conexion
 require_once ("conexion.php");
+require_once "diseño.html";
 $mensaje = "";
 //revisar datos a insertar 
 if(isset($_POST['save'])){

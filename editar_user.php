@@ -1,6 +1,7 @@
 <?php
 //consultar el registro seleccionado para colocarlo en el formulario 
 require_once "conexion.php";
+require_once "diseño.html";
 if (isset($_GET['id'])) {
     $sql = "select * from usuarios where id=".$_GET['id'];
     $resultado = $conn->query($sql);
@@ -20,38 +21,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <div class="container">
-            <header class="header">
-                <div id="titulo">
-                    <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
-                </div>
-            <div id="navegacion">
-                <div id=reporte>
-                <img src="img/reporte1.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte2.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte3.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/reporte4.png" alt="">
-                <a href="#">Lorem, ipsum dolor.</a>
-                </div>
-                <div id=reporte>
-                <img src="img/usuario.png" alt="">
-                <a href="../covitec/usuarios.php">Usuarios Registrados</a>
-                </div>
-                <div id=reporte>
-                <img src="img/cerrar_sesion.png" alt="">
-                <a href="../covitec/index.php">Cerrar Sesión.</a>
-                </div>
-            </div>
-    </div>
+    
         <?php if ($resultado->num_rows>0) { 
             $row = $resultado->fetch_array();
         ?>
