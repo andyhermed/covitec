@@ -12,8 +12,27 @@ body {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border-radius: 3px;
 }
+.etiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;
+}
+.etiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 15px;
+    padding-top: 25px;
+}
 
-.container .header #titulo{
+.etiqueta img{
+    margin-top: 0px ! important;
+    width: 100px;
+    height: 85px;
+    padding-left: 910px ! important;
+}
+.container .header #titulo {
     width: 100%;
     height: 110px;
     background: linear-gradient(to right, #AF1051, #760030);
@@ -22,7 +41,7 @@ body {
     font-size: 20px;
     padding: 0.5px;
 }
-.container .header img{
+.container .header img {
     margin-top: 10px;
     margin-left: 30px;
     float: left;
@@ -31,7 +50,7 @@ body {
 .container #navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
     width: 150px;
-    height: 450px;
+    height: 505px;
     float: left;
 }
 
@@ -105,9 +124,8 @@ a.edit {
 a.nuevo{
     font-size: 18px;
     margin: 20px;
-    margin-left: 1040px;
-  /*  display: inline-block;*/
-    padding: 3px 5px;
+    float: right;
+    padding: 3px 0 5px 0;
     text-align: center;
     color: #ffffff;
     background-color: #C2A152;

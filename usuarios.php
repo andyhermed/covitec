@@ -33,6 +33,13 @@ $resultado = $conn->query($sql);
     </head>
 
     <body>
+    <div class="etiqueta">
+        <img src="img/usuario.png" alt="Usuario Nuevo">
+        <h2>Usuarios Registrados</h2>
+        </div>
+    <div id="new-user">
+                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
+            </div>
         <div class="container">
             <div class="user-list">
             <table>
@@ -65,9 +72,6 @@ $resultado = $conn->query($sql);
                         </tbody>
                         
                     </table>
-            </div>
-            <div id="new-user">
-                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
         </div>
         <script>
