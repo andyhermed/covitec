@@ -63,6 +63,9 @@ $f_hasta = "";
     </head>
 
     <body>
+    <div class="etiqueta">
+        <h2>Reporte General Alumnos</h2>
+        </div>
         <div class="container">
             <div class = "filtro">
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
