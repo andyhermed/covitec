@@ -72,7 +72,7 @@ $h_hasta = "";
         <h2>Reporte Diario Alumnos</h2>
         </div>
         <div class="container">
-            <div class = "filtro">
+            <div class= "filtro">
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="buscar">
                 <span>
@@ -89,8 +89,10 @@ $h_hasta = "";
                 </span>
                 <br>
                 <span>
+                <div class="mostrar">
                 <input type="submit" name="mostrar" value="Mostrar todos">
                 </span>
+                </div>
                 </div>
             </div>
             <div class="user-list">

@@ -87,8 +87,10 @@ $f_hasta = "";
                 </span>
                 <br>
                 <span>
+                <div class="mostrar">
                 <input type="submit" name="mostrar" value="Mostrar todos">
                 </span>
+                </div>
                 </div>
             </div>
             <div class="user-list">

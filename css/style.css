@@ -6,7 +6,7 @@ body {
     color: #222222;
 }
 hr{
-    background-color: #760030;
+    border: #760030;
 }
 .container {
     margin: 0 auto;
@@ -52,8 +52,8 @@ hr{
 }
 .container #navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
-    width: 150px;
-    height: 700px;
+    width: 170px;
+    height: 600px;
     float: left;
 }
 
@@ -72,6 +72,40 @@ hr{
     width: 1000px;
     float:left;
 }
+.container .filtro .buscar p{
+    margin-left: 15px;
+    color: #00305C;;
+    font-size: 20px;
+    font-weight: bolder;
+    display:inline-block;
+    padding: 5px;
+}
+
+input{
+    border-radius: 18px;
+    height: 34px;
+    width: 200px;
+}
+input[type="submit"]{ 
+    background:#C2A152;
+    color:#ffffff;
+    width:150px;
+    cursor:pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    border-color: #C2A152;
+    margin-left: 5px;
+  }
+  input[type="time"]{ 
+    border-radius: 20px;
+    height: 34px;
+    margin-left: 0px !important;
+    width: 150px;
+  }
+.mostrar input[type="submit"]{
+    width: 200px !important;
+    margin-left: 520px;
+}
 .user-list {
     width: 85%;
     float: left; 
@@ -87,15 +121,8 @@ table th{
     background-color: #760030;
     color: #ffffff;
 }
-caption{
-    background: linear-gradient(to right, #91395d, #AF1051);
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 10px 0;
-}
 table th,
-table td, caption {
+table td {
     border: 1px solid #cccccc;
     padding: 10px;
     text-align: center;
@@ -124,11 +151,13 @@ a.edit {
     background-color: #EBAA3B;
 }
 a.nuevo{
-    font-size: 18px;
-    margin: 20px;
-    float: right;
-    padding: 3px 0 5px 0;
+    background:#C2A152;
+    color:#ffffff;
+    width:210px;
     text-align: center;
-    color: #ffffff;
-    background-color: #C2A152;
+    margin-right: 20px;
+    float: right;
+    cursor:pointer;
+    font-size: 20px;
+    margin-top: 12px;
 }

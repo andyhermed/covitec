@@ -40,9 +40,6 @@ $resultado = $conn->query($sql);
                 <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
         <div class="container">
-        <div id="new-user">
-                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
-            </div>
             <div class="user-list">
             <table>
                         <tbody>
