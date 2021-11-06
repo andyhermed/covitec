@@ -31,7 +31,6 @@ $resultado = $conn->query($sql);
         <title>Sistema de Control de Acceso </title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
     <div class="etiqueta">
         <img src="img/usuario.png" alt="Usuario Nuevo">
@@ -41,6 +40,9 @@ $resultado = $conn->query($sql);
                 <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>
         <div class="container">
+        <div id="new-user">
+                <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
+            </div>
             <div class="user-list">
             <table>
                         <tbody>

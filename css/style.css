@@ -52,8 +52,8 @@ hr{
 }
 .container #navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
-    width: 170px;
-    height: 620px;
+    width: 150px;
+    height: 700px;
     float: left;
 }
 
@@ -94,7 +94,6 @@ caption{
     font-weight: 500;
     margin: 0 0 10px 0;
 }
-
 table th,
 table td, caption {
     border: 1px solid #cccccc;
