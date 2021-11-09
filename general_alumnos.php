@@ -45,7 +45,7 @@ if(isset($_POST['search'])){
     $resultado = $conn->query($sql);
 }
 if (isset ($_POST['mostrar'])) {
-    $sql = "(select * from alumnos";
+    $sql = "(select * from alumnos)";
     $resultado = $conn->query($sql);
 }
 $ncontrol = "";
