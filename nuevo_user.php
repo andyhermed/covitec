@@ -9,7 +9,6 @@ require_once "diseño.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Usuario</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styles_log.css">
 </head>
 <body>
 <div class="container">
@@ -18,27 +17,27 @@ require_once "diseño.php";
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <div class="fields">
             <span>
-            <h2>Nombre(s)</h2>
-            <input placeholder="Introduce el nombre(s)" type="text" name= "nombre" />
-            </span>
-            <span>
-            <h2>Apellido Paterno</h2>
-            <input placeholder="Introduce el apellido paterno" type="text" name= "apellido_paterno" />
-            </span>
-            <span>
-            <h2>Apellido Materno</h2>
-            <input placeholder="Introduce el apellido materno" type="text" name= "apellido_materno" />
-            </span>
-            <span>
-            <h2>Usuario</h2>
-            <input placeholder="Introduce el usuario" type="text" name = "usuario" />
+                <ul>
+            <li><label>Nombre(s)</label><input placeholder="Introduce el nombre(s)" type="text" name= "nombre" /></li>
             </span>
             <br />
             <span>
-            <h2>Contraseña</h2>
-            <input placeholder="Introduce la contraseña" type="password" name= "contrasena" />
+            <li><label>Apellido Paterno</label><input placeholder="Introduce el apellido paterno" type="text" name= "apellido_paterno" /></li>
             </span>
             <br />
+            <span>
+            <li><label>Apellido Materno</label><input placeholder="Introduce el apellido materno" type="text" name= "apellido_materno" /></li>
+            </span>
+            <br />
+            <span>
+            <li><label>Usuario</label><input placeholder="Introduce el usuario" type="text" name = "usuario" /></li>
+            </span>
+            <br />
+            <span>
+            <li><label>Contraseña</label><input placeholder="Introduce la contraseña" type="password" name= "contrasena" /></li>
+            </span>
+            <br />
+</ul>
             </div>
             <div id="save">
             <input name="save" value="Guardar" type="submit" />

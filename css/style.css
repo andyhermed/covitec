@@ -80,7 +80,6 @@ hr{
     display:inline-block;
     padding: 5px;
 }
-
 input{
     border-radius: 18px;
     height: 34px;
@@ -161,3 +160,33 @@ a.nuevo{
     font-size: 20px;
     margin-top: 12px;
 }
+
+.container .form .fields li{
+    list-style: none;
+    color: #00305C;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 400px;
+    margin-bottom: 25px;
+}
+.container .form .fields li input{
+    float: right;
+    margin-right: 450px;
+    
+
+}
+.container .form .fields li label{
+    padding-right: 50px;
+    margin-left: 120px;
+
+}
+
+input[type="submit"]{ 
+    background:#C2A152 ! important;
+    color:#ffffff;
+    width:200px;
+    cursor:pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 500px;
+ }
