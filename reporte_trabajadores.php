@@ -2,7 +2,7 @@
 date_default_timezone_set("America/Mexico_City");
 //realizar conexion
 require_once ("conexion.php");
-require_once "diseño.html";
+require_once "diseño.php";
 $mensaje = "";
 $fecha = Date("Y-m-d");
 $fecha_sig = date("Y-m-d", strtotime("+1 day", strtotime($fecha)));

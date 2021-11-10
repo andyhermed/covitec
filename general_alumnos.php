@@ -2,7 +2,7 @@
 date_default_timezone_set("America/Mexico_City");
 //realizar conexion
 require_once "conexion.php";
-require_once "diseño.html";
+require_once "diseño.php";
 $mensaje = "";
 //revisar datos a insertar 
 if (isset($_POST["u_no_control"]) and isset($_POST["u_resp1"]) and isset($_POST["u_resp2"]) and isset($_POST["u_resp3"]) and isset($_POST["u_hr_cuestionario"]) and isset($_POST["u_hr_ingreso"]) and isset($_POST["u_fecha"])){

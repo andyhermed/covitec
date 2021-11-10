@@ -9,8 +9,8 @@ if (isset($_POST['save'])) {
     if ($conn->query($sql)) {
         header("location: usuarios.php");
     }else {
-        echo "<script>alert('Error al actualizar el registro')</script>";
         header("location: usuarios.php");
+        echo "<script>alert('Error al actualizar el registro')</script>";
     }
 }else {
     header("location: usuarios.php");

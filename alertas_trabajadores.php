@@ -1,4 +1,4 @@
 <?php
 require_once "conexion.php";
-require_once "diseño.html";
+require_once "diseño.php";
 ?>

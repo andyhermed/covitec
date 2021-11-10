@@ -1,7 +1,7 @@
 <?php
 //realizar conexion
 require_once ("conexion.php");
-require_once "diseño.html";
+require_once "diseño.php";
 $mensaje = "";
 //revisar datos a insertar 
 if (isset($_POST["u_id"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_nombre"]) and isset($_POST["u_apellido_paterno"]) and isset($_POST["u_apellido_materno"])){
@@ -15,12 +15,10 @@ if (isset($_POST["u_id"]) and isset($_POST["u_contrasena"]) and isset($_POST["u_
         $mensaje = "<p class='msg err-msg'>Error al insertar datos</p>";
     }
 }
-
 //realizar consulta de registros y guardarlos en variable
 $sql = "select * from usuarios where estatus = 1";
 $resultado = $conn->query($sql);
 //indicar donde poner los registros
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,35 +40,34 @@ $resultado = $conn->query($sql);
         <div class="container">
             <div class="user-list">
             <table>
-                        <tbody>
-                            <tr>
-                                <th>Usuario</th>
-                                <th>Contraseña</th>
-                                <th>Nombre</th>
-                                <th>Apellido Paterno</th>
-                                <th>Apellido Materno</th>
-                                <th></th>
-                            </tr>
-                            <?php //ESTO ES PHP
-                                if ($resultado->num_rows>0) {
-                                    while ($registro = $resultado->fetch_array()) {
-                                         echo "<tr>";
-                                         echo "<td>".$registro['id']."</td>";
-                                         echo "<td>".$registro['contrasena']."</td>";
-                                         echo "<td>".$registro['nombre']."</td>";
-                                         echo "<td>".$registro['apellido_paterno']."</td>";
-                                         echo "<td>".$registro['apellido_materno']."</td>";
-                                         echo "<td>";
-                                         echo "<a href='editar_user.php?id=".$registro['id']."' class='edit'>Editar</a>&nbsp;";
-                                         echo "<a href='baja_user.php?id=".$registro['id']."' class='delete delete-action'>Dar de baja</a>";
-                                         echo "</td>";
-                                         echo "</tr>";
-                                    }
-                                }
-                            ?> 
-                        </tbody>
-                        
-                    </table>
+                <tbody>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th></th>
+                    </tr>
+                    <?php
+                        if ($resultado->num_rows>0) {
+                            while ($registro = $resultado->fetch_array()) {
+                                echo "<tr>";
+                                echo "<td>".$registro['id']."</td>";
+                                echo "<td>".$registro['contrasena']."</td>";
+                                echo "<td>".$registro['nombre']."</td>";
+                                echo "<td>".$registro['apellido_paterno']."</td>";
+                                echo "<td>".$registro['apellido_materno']."</td>";
+                                echo "<td>";
+                                echo "<a href='editar_user.php?id=".$registro['id']."'class='edit'>Editar</a>&nbsp;";
+                                echo "<a href='baja_user.php?id=".$registro['id']."'class='delete delete-action'>Dar de baja</a>";
+                                echo "</td>";
+                                echo "</tr>";
+                            }
+                        }
+                    ?> 
+                </tbody>
+            </table>
             </div>
         </div>
         <script>

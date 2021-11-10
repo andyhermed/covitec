@@ -1,5 +1,5 @@
 <?php
-require_once "diseño.html";
+require_once "diseño.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@ require_once "diseño.html";
 <div class="container">
     
     <div class="form">
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <div class="fields">
             <span>
             <h2>Nombre(s)</h2>
@@ -46,7 +46,6 @@ require_once "diseño.html";
         </div>
 </body>
 </html>
-
 <?php
 //realizar conexion
 require_once ("conexion.php");
@@ -75,7 +74,7 @@ if(isset($_POST['save'])){
             if($filas == 1){
                 echo "<script>alert('Este usuario ya existe. Por favor, escribe uno diferente')</script>";
             }else{
-                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."', 1)";
+                $sql = "insert into usuarios values('".$u."','".$c."','".$n."','".$a_p."','".$a_m."', 1, null, null)";
     
                 if ($conn->query($sql)) {
                     $mensaje = "";

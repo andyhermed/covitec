@@ -1,7 +1,7 @@
 <?php
 //consultar el registro seleccionado para colocarlo en el formulario 
 require_once "conexion.php";
-require_once "diseño.html";
+require_once "diseño.php";
 if (isset($_GET['id'])) {
     $sql = "select * from usuarios where id=".$_GET['id'];
     $resultado = $conn->query($sql);
@@ -21,7 +21,6 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <div class="container">
-    
         <?php if ($resultado->num_rows>0) { 
             $row = $resultado->fetch_array();
         ?>
