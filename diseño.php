@@ -19,17 +19,17 @@
             <div id="navegacion">
                 <hr>
                 <div id=reporte>
-                <img src="img/libro-de-diario.png" alt="">
+                <img src="img/lista-de-verificacion.png" alt="">
                 <a href="reporte_alumnos.php">Reporte Diario Alumnos</a>
                 </div>
                 <hr>
                 <div id=reporte>
-                <img src="img/reporte.png" alt="">
+                <img src="img/seguro.png" alt="">
                 <a href="reporte_trabajadores.php">Reporte Diario Trabajadores</a>
                 </div>
                 <hr>
                 <div id=reporte>
-                <img src="img/propagar.png" alt="">
+                <img src="img/coronavirus.png" alt="">
                 <a href="alertas_alumnos.php">Reporte de Alertas Alumnos</a>
                 </div>
                 <hr>
