@@ -17,9 +17,11 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Usuario</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styles_log.css">
 </head>
 <body>
+<div class="etiqueta">
+        <h2>Editar Usuario</h2>
+        </div>
 <div class="container">
         <?php if ($resultado->num_rows>0) { 
             $row = $resultado->fetch_array();
@@ -28,26 +30,24 @@ if (isset($_GET['id'])) {
         <form method="post" action="actualizar_user.php">
             <div class="fields">
             <span>
-            <h2>Nombre(s)</h2>
-            <input placeholder="Introduce el nombre(s)" value="<?php echo $row['nombre']?>" type="text" name= "nombre" />
+            <ul>
+            <li><label>Nombre(s)</label> <input placeholder="Introduce el nombre(s)" value="<?php echo $row['nombre']?>" type="text" name= "nombre" /></li>
             </span>
             <span>
-            <h2>Apellido Paterno</h2>
-            <input placeholder="Introduce el apellido paterno" value="<?php echo $row['apellido_paterno']?>"  type="text" name= "apellido_paterno" />
+            <li><label>Apellido Paterno</label> <input placeholder="Introduce el apellido paterno" value="<?php echo $row['apellido_paterno']?>"  type="text" name= "apellido_paterno" /></li>
             </span>
             <span>
-            <h2>Apellido Materno</h2>
-            <input placeholder="Introduce el apellido materno" value="<?php echo $row['apellido_materno']?>" type="text" name= "apellido_materno" />
+            <li><label>Apellido Materno</label> <input placeholder="Introduce el apellido materno" value="<?php echo $row['apellido_materno']?>" type="text" name= "apellido_materno" /></li>
             </span>
             <span>
-            <input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
+            <li><label>Usuario</label><input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
             </span>
             <br />
             <span>
-            <h2>Contraseña</h2>
-            <input placeholder="Introduce la contraseña" value="<?php echo $row['contrasena']?>" type="password" name= "contrasena" />
+            <li><label>Contraseña</label><input placeholder="Introduce la contraseña" value="<?php echo $row['contrasena']?>" type="password" name= "contrasena" /></li>
             </span>
             <br />
+            </ul>
             </div>
             <div id="save">
             <input name="save" value="Guardar" type="submit" />

@@ -64,7 +64,7 @@ $f_hasta = "";
 
     <body>
     <div class="etiqueta">
-        <h2>Reporte General Alumnos</h2>
+        <h2>Reporte de Alertas Alumnos</h2>
         </div>
         <div class="container">
             <div class = "filtro">
