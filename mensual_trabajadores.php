@@ -69,6 +69,7 @@ $f_hasta = "";
 
     <body>
     <div class="etiqueta">
+    <img src="img/reporte-de-salud.png" alt="">
         <h2>Reporte Mensual Trabajadores</h2>
         </div>
         <div class="container">

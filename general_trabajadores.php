@@ -67,6 +67,7 @@ $f_hasta = "";
 
     <body>
     <div class="etiqueta">
+    <img src="img/documento.png" alt="">
         <h2>Reporte General Trabajadores</h2>
         </div>
         <div class="container">

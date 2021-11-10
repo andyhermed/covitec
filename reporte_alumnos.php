@@ -69,6 +69,7 @@ $h_hasta = "";
 
     <body>
     <div class="etiqueta">
+        <img src="img/lista-de-verificacion.png" alt="">
         <h2>Reporte Diario Alumnos</h2>
         </div>
         <div class="container">

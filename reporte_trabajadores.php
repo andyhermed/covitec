@@ -69,6 +69,7 @@ $h_hasta = "";
 
     <body>
     <div class="etiqueta">
+        <img src="img/seguro.png" alt="">
         <h2>Reporte Diario Trabajadores</h2>
         </div>
         <div class="container">
