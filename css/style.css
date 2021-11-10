@@ -30,10 +30,10 @@ hr{
 }
 
 .etiqueta img{
-    margin-top: 0px ! important;
-    width: 100px;
-    height: 85px;
-    padding-left: 910px ! important;
+    margin-top: 5px ! important;
+    width: 60px;
+    height: 70px;
+    padding-left: 810px ! important;
 }
 .container .header #titulo {
     width: 100%;
@@ -63,6 +63,8 @@ hr{
     text-align: center;
     font-size: 15px;
     margin: 10px 5px 0 0;
+    display: inline;
+    transition: 0.5s ease;
 }
 .container #navegacion #reporte img{
     width: 30px;
