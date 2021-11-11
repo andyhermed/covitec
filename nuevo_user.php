@@ -12,7 +12,7 @@ require_once "diseño.php";
 </head>
 <body>
 <div class="etiqueta">
-    <img src="img/add-friend.png" alt="">
+    <img src="img/agregar-usuario.png" alt="">
     <h2>Usuario Nuevo</h2>
     </div>
 <div class="container">
