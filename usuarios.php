@@ -31,7 +31,7 @@ $resultado = $conn->query($sql);
     </head>
     <body>
     <div class="etiqueta">
-        <img src="img/registrarse.png" alt="Usuario Nuevo">
+        <img src="img/registrado.png" alt="Usuario Nuevo">
         <h2>Usuarios Registrados</h2>
         </div>
     <div id="new-user">

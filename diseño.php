@@ -59,7 +59,7 @@
                 </div>
                 <hr>
                 <div id=reporte>
-                <img src="img/registrarse.png" alt="">
+                <img src="img/registrado.png" alt="">
                 <a href="usuarios.php">Usuarios Registrados</a>
                 </div>
                 <hr>

@@ -12,8 +12,9 @@ require_once "diseño.php";
 </head>
 <body>
 <div class="etiqueta">
-        <h2>Usuario Nuevo</h2>
-        </div>
+    <img src="img/add-friend.png" alt="">
+    <h2>Usuario Nuevo</h2>
+    </div>
 <div class="container">
     <div class="form">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">

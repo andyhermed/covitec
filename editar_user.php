@@ -20,6 +20,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <div class="etiqueta">
+    <img src="img/editar.png" alt="Editar Usuario">
         <h2>Editar Usuario</h2>
         </div>
 <div class="container">

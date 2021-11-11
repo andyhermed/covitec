@@ -52,7 +52,7 @@ hr{
 }
 .container #navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
-    width: 170px;
+    width: 175px;
     height: 600px;
     float: left;
 }
@@ -64,7 +64,26 @@ hr{
     font-size: 15px;
     margin: 10px 5px 0 0;
     display: inline;
-    transition: 0.5s ease-in;
+}
+.container #navegacion #reporte a:visited{
+    text-decoration: none;
+    background-color: #4b0521;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 5px 0 0;
+    display: inline;
+}
+.container #navegacion #reporte a:hover{
+    text-decoration: none;
+    background-color: #4b0521;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 5px 0 0;
+    display: inline;
 }
 .container #navegacion #reporte img{
     width: 30px;
