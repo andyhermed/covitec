@@ -66,14 +66,8 @@ hr{
     display: inline;
 }
 .container #navegacion #reporte a:visited{
-    text-decoration: none;
     background-color: #4b0521;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    margin: 10px 5px 0 0;
-    display: inline;
+    
 }
 .container #navegacion #reporte a:hover{
     text-decoration: none;
