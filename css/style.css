@@ -30,10 +30,10 @@ hr{
 }
 
 .etiqueta img{
-    margin-top: 5px ! important;
-    width: 60px;
-    height: 70px;
-    padding-left: 810px ! important;
+    margin-top: 0px ! important;
+    width: 100px;
+    height: 85px;
+    padding-left: 910px ! important;
 }
 .container .header #titulo {
     width: 100%;
@@ -64,7 +64,7 @@ hr{
     font-size: 15px;
     margin: 10px 5px 0 0;
     display: inline;
-    transition: 0.5s ease-in;
+    transition:  00.5s ease-in;
 }
 .container #navegacion #reporte img{
     width: 30px;
@@ -87,7 +87,15 @@ input{
     height: 34px;
     width: 200px;
 }
-input[type="submit"]{ 
+.container .filtro .buscar h3{
+    color: #5f6974;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bolder;
+    display:inline-block;
+    padding: 5px;
+}
+.buscar input[type="submit"]{ 
     background:#C2A152;
     color:#ffffff;
     width:150px;
@@ -104,8 +112,10 @@ input[type="submit"]{
     width: 150px;
   }
 .mostrar input[type="submit"]{
+    
     width: 200px !important;
     margin-left: 520px;
+    
 }
 .user-list {
     width: 85%;
@@ -174,16 +184,12 @@ a.nuevo{
 .container .form .fields li input{
     float: right;
     margin-right: 450px;
-   
-
 }
 .container .form .fields li label{
     padding-right: 0px;
     margin-left: 120px;
     text-align: right;
-
 }
-
 input[type="submit"]{ 
     background:#C2A152 ! important;
     color:#ffffff;
