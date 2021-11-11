@@ -178,8 +178,9 @@ a.nuevo{
 
 }
 .container .form .fields li label{
-    padding-right: 50px;
+    padding-right: 0px;
     margin-left: 120px;
+    text-align: right;
 
 }
 
