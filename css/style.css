@@ -100,7 +100,15 @@ input{
     height: 34px;
     width: 200px;
 }
-input[type="submit"]{ 
+.container .filtro .buscar h3{
+    color: #5f6974;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bolder;
+    display:inline-block;
+    padding: 5px;
+}
+.buscar input[type="submit"]{ 
     background:#C2A152;
     color:#ffffff;
     width:150px;
@@ -117,8 +125,10 @@ input[type="submit"]{
     width: 150px;
   }
 .mostrar input[type="submit"]{
+    
     width: 200px !important;
     margin-left: 520px;
+    
 }
 .user-list {
     width: 85%;
@@ -187,16 +197,12 @@ a.nuevo{
 .container .form .fields li input{
     float: right;
     margin-right: 450px;
-   
-
 }
 .container .form .fields li label{
     padding-right: 0px;
     margin-left: 120px;
     text-align: right;
-
 }
-
 input[type="submit"]{ 
     background:#C2A152 ! important;
     color:#ffffff;

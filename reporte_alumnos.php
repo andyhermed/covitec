@@ -82,9 +82,9 @@ $h_hasta = "";
                 </span>
                 <span>
                 <p>Hora de ingreso</p>
-                <p>Desde</p>
+                <h3>Desde</h3>
                 <input type="time" name="desde"> 
-                <p>Hasta</p>
+                <h3>Hasta</h3>
                 <input type="time" name="hasta"> 
                 <input type="submit" name="search" value="Buscar">
                 </span>

@@ -41,13 +41,11 @@ if (isset($_GET['id'])) {
             <li><label>Apellido Materno</label> <input placeholder="Introduce el apellido materno" value="<?php echo $row['apellido_materno']?>" type="text" name= "apellido_materno" /></li>
             </span>
             <span>
-            <li><label>Usuario</label><input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
+            <input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
             </span>
-            <br />
             <span>
             <li><label>Contraseña</label><input placeholder="Introduce la contraseña" value="<?php echo $row['contrasena']?>" type="password" name= "contrasena" /></li>
             </span>
-            <br />
             </ul>
             </div>
             <div id="save">
