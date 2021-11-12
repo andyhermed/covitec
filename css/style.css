@@ -50,44 +50,65 @@ hr{
     float: left;
     width: 100px;
 }
-.container #navegacion{
+.container .navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
-    width: 175px;
-    height: 600px;
+    width: 180px;
+    height: 630px;
     float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 20px;
+    top: 130px;
+    right: 700px;
+    bottom: 20px;
 }
 
-.container #navegacion #reporte a{
+.container .navegacion #reporte ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container .navegacion #reporte ul li{
+    display: inline-table;
+}
+.container .navegacion #reporte ul li a{
     text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.8rem;
     color: #ffffff;
     text-align: center;
     font-size: 15px;
     margin: 10px 5px 0 0;
-    display: inline;
+    transition: all 0.4s linear;
+    /*display: inline;*/
 }
-.container #navegacion #reporte a:visited{
+.container .navegacion #reporte a:visited{
     text-decoration: none;
-    background-color: #4b0521;
+    display: block;
+    padding: 0.3rem 0.8rem;
+    background-color: #72374f;
     color: #ffffff;
     text-align: center;
     font-size: 15px;
     font-weight: 700;
     margin: 10px 5px 0 0;
-    display: inline;
+    /*display: inline;*/
 }
-.container #navegacion #reporte a:hover{
+.container .navegacion #reporte a:hover{
     text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.8rem;
     background-color: #4b0521;
     color: #ffffff;
     text-align: center;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 10px 5px 0 0;
-    display: inline;
+    /*display: inline;*/
 }
-.container #navegacion #reporte img{
+.container .navegacion #reporte img{
     width: 30px;
-    margin: 5px 5px 5px 5px;
+    margin: 15px 0px 0px 0px;
 }
 .container img{
     width: 1000px;
