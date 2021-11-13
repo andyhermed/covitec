@@ -11,8 +11,10 @@ require_once "diseño.php";
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="etiqueta">
+<div class="useretiqueta">
+        <div class="us">
     <img src="img/agregar-usuario.png" alt="">
+</div>
     <h2>Usuario Nuevo</h2>
     </div>
 <div class="container">

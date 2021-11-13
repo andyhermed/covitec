@@ -65,8 +65,10 @@ $f_hasta = "";
     </head>
 
     <body>
-    <div class="etiqueta">
+    <div class="alumnoetiqueta">
+    <div class="c">
     <img src="img/informe.png" alt="">
+</div>
         <h2>Reporte Mensual Alumnos</h2>
         </div>
         <div class="container">

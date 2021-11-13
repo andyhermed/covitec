@@ -68,8 +68,10 @@ $h_hasta = "";
     </head>
 
     <body>
-    <div class="etiqueta">
+    <div class="alumnoetiqueta">
+        <div class="c">
         <img src="img/lista-de-verificacion.png" alt="">
+        </div>
         <h2>Reporte Diario Alumnos</h2>
         </div>
         <div class="container">

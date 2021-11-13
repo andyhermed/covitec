@@ -21,19 +21,77 @@ hr{
     background-color: #c98aa4;
     color: #ffffff;
 }
+.alumnoetiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.alumnoetiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    padding: 15px;
+    padding-top: 25px;
+}
 .etiqueta h2{
     text-align: right;
     margin-top: 0px;
     margin-right: 10px;
-    padding: 15px;
     padding-top: 25px;
 }
-
 .etiqueta img{
     margin-top: 7px ! important;
     width: 60px;
     height: 70px;
-    padding-left: 810px ! important;
+    padding-left: 805px;
+}
+.alumnoetiqueta .c img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    margin-left: 880px !important;
+}
+.trabajaetiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.trabajaetiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    padding: 15px;
+    padding-top: 25px;
+}
+.trabajaetiqueta img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    padding-left: 780px;
+}
+.useretiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.useretiqueta .u img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    margin-left: 950px !important;
+}
+.useretiqueta .us img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    margin-left: 1000px !important;
+}
+.useretiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding-top: 25px;
 }
 .container .header #titulo {
     width: 100%;
@@ -108,7 +166,7 @@ hr{
 }
 .container .navegacion #reporte img{
     width: 30px;
-    margin: 15px 0px 0px 0px;
+    margin: 15px 0px 0px 5px;
 }
 .container img{
     width: 1000px;
@@ -221,11 +279,11 @@ a.nuevo{
     color:#ffffff;
     width:210px;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 40px;
     float: right;
     cursor:pointer;
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .container .form .fields li{

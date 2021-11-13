@@ -30,10 +30,13 @@ $resultado = $conn->query($sql);
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-    <div class="etiqueta">
+    <div class="useretiqueta">
+        <div class="u">
         <img src="img/registrado.png" alt="Usuario Nuevo">
+</div>
         <h2>Usuarios Registrados</h2>
         </div>
+</div>
     <div id="new-user">
                 <a href="nuevo_user.php" class = "nuevo">Añadir nuevo usuario</a>
             </div>

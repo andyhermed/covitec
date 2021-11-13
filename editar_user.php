@@ -19,8 +19,10 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="etiqueta">
+<div class="useretiqueta">
+        <div class="us">
     <img src="img/editar.png" alt="Editar Usuario">
+</div>
         <h2>Editar Usuario</h2>
         </div>
 <div class="container">
