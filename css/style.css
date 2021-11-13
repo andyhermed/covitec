@@ -297,15 +297,14 @@ a.nuevo{
     color: #00305C;
     font-size: 20px;
     font-weight: bolder;
-    margin-left: 400px;
     margin-bottom: 25px;
+    float: right;
 }
 .container .form .fields li input{
-    float: right;
-    margin-right: 450px;
+   margin-right: 450px;
 }
 .container .form .fields li label{
-    padding-right: 0px;
+    padding-right: 15px;
     margin-left: 120px;
     text-align: end;
 }
@@ -316,5 +315,5 @@ input[type="submit"]{
     cursor:pointer;
     font-size: 20px;
     margin-top: 15px;
-    margin-left: 500px;
+    margin-left: 525px;
  }
