@@ -64,9 +64,7 @@ $f_hasta = "";
 
     <body>
     <div class="etiqueta">
-    <div id=icono>
     <img src="img/coronavirus.png" alt="">
-</div>
         <h2>Reporte de Alertas Alumnos</h2>
         </div>
         <div class="container">
