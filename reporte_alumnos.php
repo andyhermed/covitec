@@ -83,7 +83,7 @@ $h_hasta = "";
                 <input type="text" name="ncontrol" placeholder="Número de control"/>
                 </span>
                 <span>
-                <p>Hora de ingreso</p>
+                <h2>Hora de ingreso</h2>
                 <h3>Desde</h3>
                 <input type="time" name="desde"> 
                 <h3>Hasta</h3>
@@ -92,10 +92,8 @@ $h_hasta = "";
                 </span>
                 <br>
                 <span>
-                <div class="mostrar">
                 <input type="submit" name="mostrar" value="Mostrar todos">
                 </span>
-                </div>
                 </div>
             </div>
             <div class="user-list">
