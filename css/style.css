@@ -19,7 +19,7 @@ hr{
     width: 100%;
     height: 85px;
     background-color: #c98aa4;
-    color: #ffffff;
+    color: #ffffff;   
 }
 .alumnoetiqueta{
     width: 100%;
@@ -32,6 +32,18 @@ hr{
     margin-top: 0px;
     padding: 15px;
     padding-top: 25px;
+}
+.etiqueta h2{
+    margin-left: 900px;
+    float: left;
+}
+
+.etiqueta #icono img{
+    float: right;
+    width: 100px;
+    height: 70px;
+    margin-right: 20px;
+    margin-top: 5px;
 }
 .etiqueta h2{
     text-align: right;
@@ -94,6 +106,8 @@ hr{
     padding-top: 25px;
 }
 .container .header #titulo {
+    position: -webkit-sticky;
+    position: sticky;
     width: 100%;
     height: 110px;
     background: linear-gradient(to right, #AF1051, #760030);
@@ -110,6 +124,7 @@ hr{
 }
 .container .navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
+
     width: 180px;
     height: 630px;
     float: left;
@@ -200,7 +215,6 @@ input{
     cursor:pointer;
     font-size: 20px;
     margin-top: 10px;
-    border-color: #C2A152;
     margin-left: 5px;
   }
   .buscar input[type="submit"]:hover{ 
@@ -240,7 +254,6 @@ table {
     width: 100%;
     height: 100%;
 }
-
 table th{
     background-color: #760030;
     color: #ffffff;
@@ -250,7 +263,6 @@ table td {
     border: 1px solid #cccccc;
     padding: 10px;
     text-align: center;
-    
 }
 table td{
     color: #000000;
@@ -285,7 +297,6 @@ a.nuevo{
     font-size: 20px;
     margin-top: 10px;
 }
-
 .container .form .fields li{
     list-style: none;
     color: #00305C;
@@ -301,7 +312,8 @@ a.nuevo{
 .container .form .fields li label{
     padding-right: 0px;
     margin-left: 120px;
-    text-align: right;
+    text-align: end;
+    /*text-align: right;*/
 }
 input[type="submit"]{ 
     background:#C2A152 ! important;
