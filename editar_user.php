@@ -19,7 +19,10 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="etiqueta">
+<div class="useretiqueta">
+        <div class="us">
+    <img src="img/editar.png" alt="Editar Usuario">
+</div>
         <h2>Editar Usuario</h2>
         </div>
 <div class="container">
@@ -40,13 +43,11 @@ if (isset($_GET['id'])) {
             <li><label>Apellido Materno</label> <input placeholder="Introduce el apellido materno" value="<?php echo $row['apellido_materno']?>" type="text" name= "apellido_materno" /></li>
             </span>
             <span>
-            <li><label>Usuario</label><input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
+            <input placeholder="Introduce el usuario" hidden value="<?php echo $row['id']?>" type="text" name = "usuario" />
             </span>
-            <br />
             <span>
             <li><label>Contraseña</label><input placeholder="Introduce la contraseña" value="<?php echo $row['contrasena']?>" type="password" name= "contrasena" /></li>
             </span>
-            <br />
             </ul>
             </div>
             <div id="save">

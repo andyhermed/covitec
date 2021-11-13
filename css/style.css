@@ -19,23 +19,83 @@ hr{
     width: 100%;
     height: 85px;
     background-color: #c98aa4;
-    color: #ffffff;
+    color: #ffffff;   
+}
+.alumnoetiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.alumnoetiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    padding: 15px;
+    padding-top: 25px;
 }
 .etiqueta h2{
     text-align: right;
     margin-top: 0px;
-    margin-right: 10px;
     padding: 15px;
     padding-top: 25px;
 }
-
 .etiqueta img{
-    margin-top: 0px ! important;
-    width: 100px;
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    padding-left: 810px;
+}
+.alumnoetiqueta .c img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    margin-left: 880px !important;
+}
+.trabajaetiqueta{
+    width: 100%;
     height: 85px;
-    padding-left: 910px ! important;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.trabajaetiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    padding: 15px;
+    padding-top: 25px;
+}
+.trabajaetiqueta img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    padding-left: 780px;
+}
+.useretiqueta{
+    width: 100%;
+    height: 85px;
+    background-color: #c98aa4;
+    color: #ffffff;   
+}
+.useretiqueta .u img{
+    margin-top: 7px ! important;
+    width: 60px;
+    height: 70px;
+    margin-left: 950px !important;
+}
+.useretiqueta .us img{
+    margin-top: 7px ! important;
+    width: 55px;
+    height: 70px;
+    margin-left: 1000px !important;
+}
+.useretiqueta h2{
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding-top: 25px;
 }
 .container .header #titulo {
+    position: -webkit-sticky;
+    position: sticky;
     width: 100%;
     height: 110px;
     background: linear-gradient(to right, #AF1051, #760030);
@@ -50,61 +110,135 @@ hr{
     float: left;
     width: 100px;
 }
-.container #navegacion{
+.container .navegacion{
     background: linear-gradient(to bottom, #AF1051, #760030);
-    width: 170px;
-    height: 600px;
+
+    width: 180px;
+    height: 630px;
     float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 20px;
+    top: 130px;
+    right: 700px;
+    bottom: 20px;
 }
 
-.container #navegacion #reporte a{
+.container .navegacion #reporte ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container .navegacion #reporte ul li{
+    display: inline-table;
+}
+.container .navegacion #reporte ul li a{
     text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.8rem;
     color: #ffffff;
     text-align: center;
     font-size: 15px;
     margin: 10px 5px 0 0;
+    transition: all 0.4s linear;
 }
-.container #navegacion #reporte img{
+.container .navegacion #reporte a:visited{
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.8rem;
+    background-color: #72374f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 5px 0 0;
+}
+.container .navegacion #reporte a:hover{
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.8rem;
+    background-color: #4b0521;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 5px 0 0;
+    /*display: inline;*/
+}
+.container .navegacion #reporte img{
     width: 30px;
-    margin: 5px 5px 5px 5px;
+    margin: 15px 0px 0px 5px;
 }
 .container img{
     width: 1000px;
     float:left;
 }
-.container .filtro .buscar p{
-    margin-left: 15px;
+.container .filtro .buscar  p{
+    margin-left: 25px;
     color: #00305C;;
     font-size: 20px;
     font-weight: bolder;
     display:inline-block;
-    padding: 5px;
+    padding: 10px;
 }
 input{
     border-radius: 18px;
     height: 34px;
     width: 200px;
 }
-input[type="submit"]{ 
+.container .filtro .buscar h3{
+    color: #505c68;
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    display:inline-block;
+    padding: 1px;
+}
+.container .filtro .buscar h2{
+    color: #00305C;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    display:inline-block;
+    
+}
+
+.filtro input[type="submit"]{ 
     background:#C2A152;
     color:#ffffff;
-    width:150px;
+    width:140px;
     cursor:pointer;
     font-size: 20px;
     margin-top: 10px;
-    border-color: #C2A152;
-    margin-left: 5px;
+    margin-left: 30px;
   }
+.filtro input[name="mostrar"]{
+      width: 200px !important;
+      margin-left: 520px;
+  }
+ 
   input[type="time"]{ 
     border-radius: 20px;
     height: 34px;
     margin-left: 0px !important;
-    width: 150px;
+    width: 125px;
   }
-.mostrar input[type="submit"]{
-    width: 200px !important;
-    margin-left: 520px;
-}
+  input[type="date"]{ 
+    border-radius: 20px;
+    height: 34px;
+    margin-left: 0px !important;
+    width: 130px;
+  }
+  input[type="text"]{ 
+    border-radius: 20px;
+    height: 34px;
+    margin-left: 0px !important;
+    width: 210px !important;
+  }
+  input[type="password"]{ 
+    width: 210px !important;
+  }
 .user-list {
     width: 85%;
     float: left; 
@@ -115,7 +249,6 @@ table {
     width: 100%;
     height: 100%;
 }
-
 table th{
     background-color: #760030;
     color: #ffffff;
@@ -125,7 +258,6 @@ table td {
     border: 1px solid #cccccc;
     padding: 10px;
     text-align: center;
-    
 }
 table td{
     color: #000000;
@@ -154,39 +286,34 @@ a.nuevo{
     color:#ffffff;
     width:210px;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 40px;
     float: right;
     cursor:pointer;
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
-
 .container .form .fields li{
     list-style: none;
     color: #00305C;
     font-size: 20px;
     font-weight: bolder;
-    margin-left: 400px;
     margin-bottom: 25px;
+    float: right;
 }
 .container .form .fields li input{
-    float: right;
-    margin-right: 450px;
-   
-
+   margin-right: 450px;
 }
 .container .form .fields li label{
-    padding-right: 50px;
+    padding-right: 15px;
     margin-left: 120px;
-
+    text-align: end;
 }
-
 input[type="submit"]{ 
     background:#C2A152 ! important;
     color:#ffffff;
     width:200px;
     cursor:pointer;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 500px;
+    margin-top: 15px;
+    margin-left: 525px;
  }

@@ -63,7 +63,10 @@ $f_hasta = "";
     </head>
 
     <body>
-    <div class="etiqueta">
+    <div class="alumnoetiqueta">
+    <div class="c">
+    <img src="img/reporte.png" alt="">
+    </div>
         <h2>Reporte General Alumnos</h2>
         </div>
         <div class="container">
@@ -75,19 +78,17 @@ $f_hasta = "";
                 <input type="text" name="ncontrol" placeholder="Número de control"/>
                 </span>
                 <span>
-                <p>Fecha</p>
-                <p>Desde</p>
+                <h2>Fecha de ingreso</h2>
+                <h3>Desde</h3>
                 <input type="date" name="desde"> 
-                <p>Hasta</p>
+                <h3>Hasta</h3>
                 <input type="date" name="hasta"> 
                 <input type="submit" name="search" value="Buscar">
                 </span>
                 <br>
                 <span>
-                <div class="mostrar">
                 <input type="submit" name="mostrar" value="Mostrar todos">
                 </span>
-                </div>
                 </div>
             </div>
             <div class="user-list">
