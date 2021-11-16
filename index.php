@@ -17,7 +17,7 @@
         <div class="fields">
         <span>
         <h2>Usuario</h2>
-        <input placeholder="Introduce tu name" type="text" name = "usuario" />
+        <input placeholder="Introduce tu nombre" type="text" name = "usuario" />
         </span>
         <br />
         <span>
