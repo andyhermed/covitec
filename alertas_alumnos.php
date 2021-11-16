@@ -20,32 +20,32 @@ if(isset($_POST['search'])){
     $ncontrol = $_POST['ncontrol'];
     $f_desde = $_POST['desde'];
     $f_hasta = $_POST['hasta'];
-    $sql = "(select * from alumnos where no_control like '%".$ncontrol."%' and fecha between '".$f_desde."' and '".$f_hasta."' and (resp1=1 or resp2=1 or resp3=1))";
+    $sql = "(select * from alumnos where no_control like '%".$ncontrol."%' and fecha between '".$f_desde."' and '".$f_hasta."' and (resp1=1 or resp2=1 or resp3=1) order by fecha desc)";
     $resultado = $conn->query($sql);
     if ($f_desde == "") {
         if ($f_hasta == "") {
-            $sql = "(select * from alumnos where no_control like '%".$ncontrol."%' and (resp1=1 or resp2=1 or resp3=1))";
+            $sql = "(select * from alumnos where no_control like '%".$ncontrol."%' and (resp1=1 or resp2=1 or resp3=1) order by fecha desc)";
             $resultado = $conn->query($sql);
         }
     }
     if ($ncontrol == "") {
-        $sql = "(select * from alumnos where fecha between '".$f_desde."' and '".$f_hasta."' and (resp1=1 or resp2=1 or resp3=1))";
+        $sql = "(select * from alumnos where fecha between '".$f_desde."' and '".$f_hasta."' and (resp1=1 or resp2=1 or resp3=1) order by fecha desc)";
             $resultado = $conn->query($sql);
     }
     if ($ncontrol == ""){
         if ($f_desde == "") {
             if ($f_hasta == "") {
-                $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1)";
+                $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1 order by fecha desc)";
                 $resultado = $conn->query($sql);
             }
         }
     }
 }else {
-    $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1)";
+    $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1 order by fecha desc)";
     $resultado = $conn->query($sql);
 }
 if (isset ($_POST['mostrar'])) {
-    $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1)";
+    $sql = "(select * from alumnos where resp1 = 1 or resp2 = 1 or resp3 = 1 order by fecha desc)";
     $resultado = $conn->query($sql);
 }
 $ncontrol = "";
