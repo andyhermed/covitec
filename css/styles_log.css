@@ -5,19 +5,22 @@ body {
     background-color: #ffffff;
     color: #222222;
 }
+.container #encabezado img{
+    width: 100%;
+}
 .container #encabezado h1{
     color: #760030;
-    margin-left: 580px;
+    margin-left: 666px;
 }
 .container .fields{
-    margin: 0 80px 10px 520px
+    margin: 0 80px 10px 620px
 }
 .container .fields h2{
     color: #00305C;
     font-size: 20px;
 }
 .container #login {
-    margin: 20px 100px 10px 570px;
+    margin: 20px 100px 10px 666px;
 }
 input{
     border-radius: 22px;

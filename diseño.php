@@ -13,7 +13,7 @@
             <header class="header">
                 <div id="titulo">
                     <img src="img/LogotipoCoviteceEncabezado.png" alt="Logotipo de Covitec">
-                    <h1>Sistema de control de Acceso</h1>
+                    <h1>Sistema de Control de Acceso</h1>
                     <hr>
                 </div>
             <div class="navegacion">
