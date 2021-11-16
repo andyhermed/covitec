@@ -1,5 +1,6 @@
 <?php
 //actualizar registro
+error_reporting(0);
 require_once "conexion.php";
 require_once "usuarios.php";
 
